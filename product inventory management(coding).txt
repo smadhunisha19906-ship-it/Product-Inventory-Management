@@ -1,0 +1,20 @@
+inventory = {}
+
+while True:
+    print("\n1.Add Product  2.View Products  3.Exit")
+    choice = input("Enter choice: ")
+
+    if choice == "1":
+        name = input("Product name: ")
+        qty = int(input("Quantity: "))
+        inventory[name] = qty
+        print("Product added")
+
+    elif choice == "2":
+        print("\nInventory List:")
+        for name, qty in inventory.items():
+            print(name, "-", qty)
+
+    elif choice == "3":
+        print("Program ended")
+        break
